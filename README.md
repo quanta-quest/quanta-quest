@@ -76,6 +76,13 @@ The application is divided into **two parts**:
 - NEXT_PUBLIC_PUBLISHABLE_KEY - Stripe publishable key
 - STRIPE_SECRET_KEY - Stripe secret key
 
+## Running Process
+
+- Clone the code to your local machine, then enter the project directory with `cd ./quanta-quest-web`
+- Set up environment variables by running `cp .env.example .env`, and configure the environment variables as needed
+- Install dependencies by running `pnpm install`
+- Run the program locally, listening on port `3000`, by executing `pnpm dev`
+
 # Roadmap
 
 - [x] Notion
