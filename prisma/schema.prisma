@@ -1,0 +1,103 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model aerich {
+  id      Int    @id @default(autoincrement())
+  version String @db.VarChar(255)
+  app     String @db.VarChar(100)
+  content Json
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model user {
+  id                 Int                  @id @default(autoincrement())
+  create_time        DateTime             @default(now()) @db.Timestamptz(6)
+  update_time        DateTime             @default(now()) @db.Timestamptz(6)
+  kinde_user_id      String               @default("") @db.VarChar(50)
+  email              String               @default("") @db.VarChar(50)
+  nickname           String               @default("") @db.VarChar(50)
+  image              String               @default("") @db.VarChar(255)
+  status             Int                  @default(0) @db.SmallInt
+  stripe_customer_id String               @default("") @db.VarChar(50)
+  trial_end_at       DateTime?            @db.Timestamptz(6)
+  trial_start_at     DateTime?            @db.Timestamptz(6)
+  user_app_source    user_app_source[]
+  user_subscriptiion user_subscriptiion[]
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model user_app_source {
+  id               Int            @id @default(autoincrement())
+  create_time      DateTime       @default(now()) @db.Timestamptz(6)
+  update_time      DateTime       @default(now()) @db.Timestamptz(6)
+  app_id           Int            @default(0)
+  access_token     String         @default("") @db.VarChar(255)
+  refresh_token    String         @default("") @db.VarChar(255)
+  connected_at     DateTime?      @db.Timestamptz(6)
+  expired_at       DateTime?      @db.Timestamptz(6)
+  status           Int            @default(0)
+  remark           String         @default("") @db.VarChar(255)
+  granted_data     Json?
+  user_id          Int
+  sync_status      Int            @default(0) @db.SmallInt
+  last_sync_at     DateTime?      @db.Timestamptz(6)
+  fetch_docs_count Int            @default(0)
+  app_document     app_document[]
+  user             user           @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model app_document {
+  id                 Int             @id @default(autoincrement())
+  create_time        DateTime        @default(now()) @db.Timestamptz(6)
+  update_time        DateTime        @default(now()) @db.Timestamptz(6)
+  title              String          @default("") @db.VarChar(255)
+  content            String
+  source_id          String          @default("") @db.VarChar(255)
+  location           String          @default("") @db.VarChar(512)
+  url                String          @default("") @db.VarChar(512)
+  status             Int             @default(0) @db.SmallInt
+  document_type      String          @default("document") @db.VarChar(8)
+  user_id            Int             @default(0)
+  app_id             Int             @default(0)
+  user_app_source_id Int
+  additional_data    Json?
+  indexed_at         DateTime?       @db.Timestamptz(6)
+  user_app_source    user_app_source @relation(fields: [user_app_source_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  app_pharase        app_pharase[]
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model app_pharase {
+  id           Int          @id @default(autoincrement())
+  create_time  DateTime     @default(now()) @db.Timestamptz(6)
+  update_time  DateTime     @default(now()) @db.Timestamptz(6)
+  chunk_id     String       @default("") @db.VarChar(255)
+  chunk_size   Int          @default(0)
+  content      String
+  user_id      Int          @default(0)
+  app_id       Int          @default(0)
+  document_id  Int
+  app_document app_document @relation(fields: [document_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model user_subscriptiion {
+  id                            Int       @id @default(autoincrement())
+  create_time                   DateTime  @default(now()) @db.Timestamptz(6)
+  update_time                   DateTime  @default(now()) @db.Timestamptz(6)
+  stripe_subscription_id        String    @default("") @db.VarChar(50)
+  current_subscription_start_at DateTime? @db.Timestamptz(6)
+  current_subscription_end_at   DateTime? @db.Timestamptz(6)
+  cancel_at_period_end          Boolean   @default(false)
+  stripe_subscription_status    String    @default("incomplete") @db.VarChar(18)
+  user_id                       Int
+  user                          user      @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}

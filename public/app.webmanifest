@@ -1,0 +1,25 @@
+{
+  "lang": "en-EN",
+  "name": "Quanta Quest: AI-Powered Personal Knowledge Management | Boost Productivity",
+  "short_name": "Quanta Quest: AI-Powered Personal Knowledge Management",
+  "description": "Quanta Quest revolutionizes personal knowledge management with AI. Connect all your data sources, search intelligently, and boost productivity. Start your free trial today!",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#000",
+  "background_color": "#000",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

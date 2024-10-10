@@ -1,0 +1,31 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - 'npm install'
+    build:
+      commands:
+        - echo "DATABASE_URL=$DATABASE_URL" >> .env
+        - echo "NEXT_PUBLIC_BASE_URL=$NEXT_PUBLIC_BASE_URL" >> .env
+        - echo "SERVER_URL=$SERVER_URL" >> .env
+        - echo "KINDE_CLIENT_ID=$KINDE_CLIENT_ID" >> .env
+        - echo "KINDE_CLIENT_SECRET=$KINDE_CLIENT_SECRET" >> .env
+        - echo "KINDE_ISSUER_URL=$KINDE_ISSUER_URL" >> .env
+        - echo "KINDE_SITE_URL=$KINDE_SITE_URL" >> .env
+        - echo "KINDE_POST_LOGOUT_REDIRECT_URL=$KINDE_POST_LOGOUT_REDIRECT_URL" >> .env
+        - echo "KINDE_POST_LOGIN_REDIRECT_URL=$KINDE_POST_LOGIN_REDIRECT_URL" >> .env
+        - echo "STRIPE_MONTHLY_PRICE_ID=$STRIPE_MONTHLY_PRICE_ID" >> .env
+        - echo "STRIPE_QUARTERLY_PRICE_ID=$STRIPE_QUARTERLY_PRICE_ID" >> .env
+        - echo "STRIPE_YEARLY_PRICE_ID=$STRIPE_YEARLY_PRICE_ID" >> .env
+        - echo "NEXT_PUBLIC_PUBLISHABLE_KEY=$NEXT_PUBLIC_PUBLISHABLE_KEY" >> .env
+        - echo "STRIPE_SECRET_KEY=$STRIPE_SECRET_KEY" >> .env
+        - npm run prisma:generate
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*

@@ -1,0 +1,117 @@
+.iPiece {
+    display: grid;
+    grid-template-rows: repeat(4, 15px);
+    grid-template-columns: repeat(1, 15px);
+    grid-template-areas:
+      "a"
+      "a"
+      "a"
+      "a";
+  }
+  .iPiece > div {
+    grid-area: a;
+    background-color: #6fcbf8;
+  }
+  
+  .jPiece {
+    display: grid;
+    grid-template-rows: repeat(3, 15px);
+    grid-template-columns: repeat(2, 15px);
+    grid-template-areas:
+      ". a"
+      ". a"
+      "b b";
+    width: calc(2 * 15px);
+    height: calc(3 * 15px);
+  }
+  .jPiece > div:first-child {
+    grid-area: a;
+    background-color: #3030cf;
+  }
+  .jPiece > div:last-child {
+    grid-area: b;
+    background-color: #3030cf;
+  }
+  
+  .lPiece {
+    display: grid;
+    grid-template-rows: repeat(3, 15px);
+    grid-template-columns: repeat(2, 15px);
+    grid-template-areas:
+      "a ."
+      "a ."
+      "b b";
+  }
+  .lPiece > div:first-child {
+    grid-area: a;
+    background-color: #f88c41;
+  }
+  .lPiece > div:last-child {
+    grid-area: b;
+    background-color: #f88c41;
+  }
+  
+  .oPiece {
+    display: grid;
+    grid-template-rows: repeat(2, 15px);
+    grid-template-columns: repeat(2, 15px);
+    grid-template-areas:
+      "a a"
+      "a a";
+  }
+  .oPiece > div {
+    grid-area: a;
+    background-color: #fed504;
+  }
+  
+  .sPiece {
+    display: grid;
+    grid-template-rows: repeat(2, 15px);
+    grid-template-columns: repeat(3, 15px);
+    grid-template-areas:
+      ". a a"
+      "b b .";
+  }
+  .sPiece > div:first-child {
+    grid-area: a;
+    background-color: #52cc74;
+  }
+  .sPiece > div:last-child {
+    grid-area: b;
+    background-color: #52cc74;
+  }
+  
+  .tPiece {
+    display: grid;
+    grid-template-rows: repeat(2, 15px);
+    grid-template-columns: repeat(3, 15px);
+    grid-template-areas:
+      ". a ."
+      "b b b";
+  }
+  .tPiece > div:first-child {
+    grid-area: a;
+    background-color: #bd46d0;
+  }
+  .tPiece > div:last-child {
+    grid-area: b;
+    background-color: #bd46d0;
+  }
+  
+  .zPiece {
+    display: grid;
+    grid-template-rows: repeat(2, 15px);
+    grid-template-columns: repeat(3, 15px);
+    grid-template-areas:
+      "a a ."
+      ". b b";
+  }
+  .zPiece > div:first-child {
+    grid-area: a;
+    background-color: #ff3859;
+  }
+  .zPiece > div:last-child {
+    grid-area: b;
+    background-color: #ff3859;
+  }
+  

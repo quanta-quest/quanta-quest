@@ -1,0 +1,5 @@
+customHeaders:
+  - pattern: '**'
+    headers:
+      - key: 'X-Accel-Buffering'
+        value: 'no'
