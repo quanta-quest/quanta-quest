@@ -14,6 +14,13 @@
     </a>
   </p>
 </div>
+<div>
+  <p align="center">
+    <a href="./README.md"><img alt="README in English" src="https://img.shields.io/badge/English-d9d9d9"></a>
+    <a href="./README_CN.md"><img alt="简体中文版自述文件" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
+    <a href="./README_JA.md"><img alt="日本語のREADME" src="https://img.shields.io/badge/日本語-d9d9d9"></a>
+  </p>
+</div>
 
 # What's Quanta Quest
 
@@ -42,6 +49,12 @@ Quanta Quest将持续沿着“专有数据”与“端侧大模型”结合的�
    ![newsletters](https://quantaquestapp.com/imgs/newsletters.png)
 2. 最近哪些AI项目获得融资？
    ![aistartups](https://quantaquestapp.com/imgs/aistartups.png)
+
+# 跟进发展
+
+为Quanta Quest点Star，跟进后续发展
+
+![githubstar](https://quantaquestapp.com/imgs/githubstar.gif)
 
 # 如何部署
 
@@ -99,7 +112,7 @@ Quanta Quest将持续沿着“专有数据”与“端侧大模型”结合的�
 - [ ] 支持应用范围内向量搜索
 - [ ] 更多数据源接入支持
 
-## License
+# License
 
 版权所有 2024 Quanta Quest
 

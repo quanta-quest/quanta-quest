@@ -14,6 +14,13 @@
     </a>
   </p>
 </div>
+<div>
+  <p align="center">
+    <a href="./README.md"><img alt="README in English" src="https://img.shields.io/badge/English-d9d9d9"></a>
+    <a href="./README_CN.md"><img alt="简体中文版自述文件" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
+    <a href="./README_JA.md"><img alt="日本語のREADME" src="https://img.shields.io/badge/日本語-d9d9d9"></a>
+  </p>
+</div>
 
 # What's Quanta Quest?
 
@@ -38,6 +45,12 @@
 2. Which AI projects have recently received funding?
 
 ![aistartups](https://quantaquestapp.com/imgs/aistartups.png)
+
+# Staying ahead
+
+Star Quanta Quest on GitHub and be instantly notified of new releases.
+
+![githubstar](https://quantaquestapp.com/imgs/githubstar.gif)
 
 # How to deploy
 
@@ -95,7 +108,7 @@ The application is divided into **two parts**:
 - [ ] Support vector search within data source scope
 - [ ] Support for more data sources
 
-## License
+# License
 
 Copyright 2024 Quanta Quest Private Limited
 
