@@ -1,9 +1,5 @@
-<h3 align="center">
-  <img
-    src="https://quantaquestapp.com/logo.png"
-    height="200"
-  >
-</h3>
+![cover](./public/imgs/cover.jpeg)
+
 <div>
   <p align="center">
     <a href="https://x.com/ethanfrostlove">
@@ -47,8 +43,10 @@ Quanta Quest将持续沿着“专有数据”与“端侧大模型”结合的�
 
 1. 询问订阅了哪些Newsletter？
    ![newsletters](https://quantaquestapp.com/imgs/newsletters.png)
-2. 最近哪些AI项目获得融资？
-   ![aistartups](https://quantaquestapp.com/imgs/aistartups.png)
+
+2. Introduce QuantaQuest
+
+![introduce-case](./public/imgs/introduce_case.png)
 
 # 跟进发展
 
@@ -101,6 +99,8 @@ Quanta Quest将持续沿着“专有数据”与“端侧大模型”结合的�
 - 本地运行程序，监听`3000`端口，执行 `pnpm dev`
 
 # 路线图
+
+![roadmap-apps](./public/imgs/roadmap_apps.jpeg)
 
 - [x] Notion
 - [ ] Gmail

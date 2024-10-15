@@ -1,9 +1,5 @@
-<h3 align="center">
-  <img
-    src="https://quantaquestapp.com/logo.png"
-    height="200"
-  >
-</h3>
+![cover](./public/imgs/cover.jpeg)
+
 <div>
   <p align="center">
     <a href="https://x.com/ethanfrostlove">
@@ -44,9 +40,9 @@
 
 ![newsletters](https://quantaquestapp.com/imgs/newsletters.png)
 
-2. Which AI projects have recently received funding?
+2. Introduce QuantaQuest
 
-![aistartups](https://quantaquestapp.com/imgs/aistartups.png)
+![introduce-case](./public/imgs/introduce_case.png)
 
 # 最新の情報を入手
 
@@ -90,6 +86,8 @@ GitHub上でQuanta Questにスターを付けることで、Difyに関する新�
 - `STRIPE_SECRET_KEY` - Stripeのシークレットキー
 
 # ロードマップ
+
+![roadmap-apps](./public/imgs/roadmap_apps.jpeg)
 
 - [x] Notion
 - [ ] Gmail
