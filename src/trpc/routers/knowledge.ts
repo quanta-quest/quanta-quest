@@ -3,7 +3,7 @@ import { observable } from '@trpc/server/observable';
 import { z } from 'zod';
 
 import { type SearchResultDocument, type SearchResultWithAI } from '@/schemas/knowledge-schemes';
-import { type ServerBaseResponse } from '@/schemas/server-reponse';
+import { type ServerBaseResponse } from '@/schemas/server-response';
 import { check_user_status } from '@/service/users';
 
 import { privateProcedure, router } from '../trpc';
