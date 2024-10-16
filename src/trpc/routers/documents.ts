@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 import { db } from '@/lib/prisma';
-import { ServerBaseResponse } from '@/schemas/server-reponse';
+import { ServerBaseResponse } from '@/schemas/server-response';
 
 import { privateProcedure, router } from '../trpc';
 
