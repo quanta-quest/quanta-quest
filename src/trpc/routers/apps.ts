@@ -4,7 +4,7 @@ import { z } from 'zod';
 import { getAppInfos } from '@/lib/constants/app-constants';
 import { db } from '@/lib/prisma';
 import { type AppDataSource, type UserAppDataSource } from '@/schemas/apps-schemes';
-import { type ServerBaseResponse } from '@/schemas/server-reponse';
+import { type ServerBaseResponse } from '@/schemas/server-response';
 import { check_user_status } from '@/service/users';
 
 import { privateProcedure, router } from '../trpc';
